@@ -2,16 +2,22 @@
 - Multiple estimates of latent demand using survey data
 - Appliance acquisition after electricity provision
 
+# Abstract
+
 
 # Introduction
 
+- **global topic**
 - global electricity access is poor
 - many areas require private capital to install electricity
 - part of problem is upfront investment cost
-- due to perceived business risk, upfront capital is costly
-- ---
+- due to perceived business risk, upfront capital is costly (citation)
+- **oversizing**
 - oversized microgrids based on overestimated demand that cannot meet
-    revenue targets contribute to this perception (cite schnitzer)
+    revenue targets contribute to this perception
+- Schnitzer has shown the consequences of generators with excess
+    capacity on microgrid operation
+    - EPP thesis work chapter three
 - to lower this cost, accurate demand estimation is necessary
 - estimating demand in areas without access is challenging
 - through more accurate appliance estimation, we may achieve more
@@ -19,7 +25,7 @@
 - with more accurate energy estimation, a micro-utility can reduce
     the variance in revenue
 - reductions in revenue variance should lead to lower-cost capital
-- ---
+- **study detail**
 - this study aims to improve bottom up models in rural areas for
     households
 - data set with similar communities with and without access
@@ -27,38 +33,11 @@
 - do you currently own appliance X?
 - if electricity available, will you buy appliance X?
 - we demonstrate several approaches to estimating eventual ownership
-
-
-# Literature Review
-
-<!-- TODO: organize this section -->
-- We are interested in the response of a community to the availability
-    of electricity
-- previous work has addressed various aspects of this issue
+- **related work**
 - Wolfram et al have used an econometric approach to predict the
     appliance acquisition as communities encounter wealth
-- Microgrid diesel generators are often too large for loads leading to
-    inefficiencies and revenue problems
-- Schnitzer has shown the consequences of generators with excess
-    capacity on microgrid operation
-    - EPP thesis work chapter three
-- World Bank energy survey with Indonesia data
-    - orient our data to this data set
-- Lighting Global has an Indonesia study
-- other literature search results
-- Electricity Saving Potential in Indonesian Households: A
-  Techno-Socio-Economic Analysis, Wijaya and Tezuka
-- https://erywijaya.files.wordpress.com/2012/03/e-028.pdf
-- Wolfram, How Will Energy Demand Develop in the Developing World?
-- Wolfram, The Demand for Energy-Using Assets among the World's Rising
-  Middle Classes
 - Jay Taneja IBM Nairobi paper shows district based approach to village
     pairing strategy
-- Casillas and Kammen undersizing and interventions
-- Nathan Johnson HOMER modeling
-- Patero and Lund bottom up demand model
-- Wolfram under grid paper
-- self cite appliance sampling from Schnitzer
 
 
 # Method
@@ -155,4 +134,6 @@
 - What is the least cost temporal provision of assets for these
     locations?  We borrow from the current utility planning literature.
 
-
+    # Bibliography
+- http://www.nber.org/papers/w17747.pdf wolfram how will energy demand
+    develop
