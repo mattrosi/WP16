@@ -62,13 +62,12 @@
 ## Appliance ownership
 
 <!-- TODO: create notebooks that have these sections in them -->
-- TODO: assign to MR
 - We observe the overall reported percentage of each appliance (fig or
     table)
 - We then split the dataset and assign each village to an access type
     (grid, microgrid, no central access)
 - We observe the reported percentage of appliance in each type
-- fig label appliance_by_access_type
+- fig label appliance_ownership_by_access_type
 
 
 ## Current Appliance Ownership
