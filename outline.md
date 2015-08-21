@@ -88,7 +88,7 @@
 - This should be relatively constant over access types but our data do
     not show that
 - Show bar chart with numbers
-- label: appliance_desire_to_buy
+- label: appliance_desire_to_buy_by_access_type
 
 
 ## Electrified estimate of appliance ownership
