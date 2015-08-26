@@ -114,6 +114,8 @@
 
 [figure caption](figures/test.pdf)
 
+[figure caption](figures/test.png)
+
 ## Electrified estimate of appliance ownership
 
 - we also estimate ownership by measuring the ownership of appliances in
