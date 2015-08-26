@@ -112,7 +112,7 @@
 - Show bar chart with numbers
 - label: appliance_desire_to_buy_by_access_type
 
-![figure caption](figures/test.pdf)
+[figure caption](figures/test.pdf)
 
 ## Electrified estimate of appliance ownership
 
