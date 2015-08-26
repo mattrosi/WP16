@@ -7,25 +7,31 @@
 
 # Introduction
 
-- **global topic**
+## global topic
+
 - global electricity access is poor
 - many areas require private capital to install electricity
 - part of problem is upfront investment cost
 - due to perceived business risk, upfront capital is costly (citation)
-- **oversizing**
+
+## oversizing
+
 - oversized microgrids based on overestimated demand that cannot meet
     revenue targets contribute to this perception
 - Schnitzer has shown the consequences of generators with excess
     capacity on microgrid operation
     - EPP thesis work chapter three
-- to lower this cost, accurate demand estimation is necessary
+- to avoid excess capacity, systems must be sized appropriately
+- accurate sizing requires accurate demand estimation
 - estimating demand in areas without access is challenging
 - through more accurate appliance estimation, we may achieve more
     accurate energy estimation
 - with more accurate energy estimation, a micro-utility can reduce
     the variance in revenue
 - reductions in revenue variance should lead to lower-cost capital
-- **study detail**
+
+## study detail
+
 - this study aims to improve bottom up models in rural areas for
     households
 - data set with similar communities with and without access
@@ -33,15 +39,31 @@
 - do you currently own appliance X?
 - if electricity available, will you buy appliance X?
 - we demonstrate several approaches to estimating eventual ownership
-- **related work**
+
+## related work
+
+- other studies have made forecasts of electricity demand
 - Wolfram et al have used an econometric approach to predict the
     appliance acquisition as communities encounter wealth
+- the wolfram study forecasts appliance purchases stimulated by
+    increases in wealth
 - Jay Taneja IBM Nairobi paper shows district based approach to village
     pairing strategy
+- this study forecasts energy demand by comparing similar villages
+    before and after a connection to electricity
 
 
 # Method
 
+## Assumptions
+- We do not have random sampling
+- We do not consider economic effects since we don't observe significant
+    income variations in previously connected areas
+- Electricity won't significantly influence disposable income
+- Households dominate microgrid energy and power demands
+
+
+## Survey Description
 <!-- TODO: look through summer 2014 notes for appliance schnitzer notes -->
 - survey supplied by collaborators from AE and Cenderwash University
 - survey designed by AE
@@ -51,28 +73,26 @@
 - N = 1184
 
 
-## Assumptions
-- We do not have random sampling
-- We do not consider economic effects since we don't observe significant
-    income variations in connected areas
-- Electricity won't significantly influence disposable income
-- Households dominate microgrid energy and power demands
-
-
 ## Appliance ownership
 
-<!-- TODO: create notebooks that have these sections in them -->
-- We observe the overall reported percentage of each appliance (fig or
-    table)
+- We observe the overall reported percentage of household reporting
+    ownership of each appliance (fig or table)
 - We then split the dataset and assign each village to an access type
     (grid, microgrid, no central access)
-- We observe the reported percentage of appliance in each type
+- We observe the reported percentage of appliance in each access type
 - fig label appliance_ownership_by_access_type
+- bar chart
+- x-axis appliance type
+- color access type
+- y-axis percent ownership reported
+- N as part of x-axis label?
 
 
 ## Current Appliance Ownership
 
-- We can also categorize the appliances by energy use per day
+- We expect to find devices that require more energy only in grid
+    locations
+- We test this by classifying the appliances by estimated energy use per day
 - We don't expect to find high energy use appliances in areas without
     central access
 - Show bar chart with numbers
@@ -80,6 +100,8 @@
 
 ## Surveyed Appliance Desire
 
+- we estimate the percentage of households owning an appliance post
+    electrification using survey responses
 - approach one: for low access areas, add the population currently
     owning appliances and add the population that doesn't own one but
     claims that they will buy
@@ -93,6 +115,10 @@
 
 ## Electrified estimate of appliance ownership
 
+- we also estimate ownership by measuring the ownership of appliances in
+    a similar but previously connected village
+- we assume that newly connected villages will eventually resemble
+    previously electrified villages
 - approach two: match villages by other characteristics and find the
     levels of appliance ownership in the connected villages most like
     the unconnected villages.  (we focus on high consumption
@@ -104,11 +130,28 @@
 - estimate increased appliance purchases
 - estimate resulting increase in energy usage
 - compare results from approaches
+
+## Comparison of preferences and matched villages
+
+- we can compare these two approaches
+- show differences in percentage forecast by access type
+- side by side box or violin plot with dots
+- x-axis access type
+- color forecast method
+- y-axis percentage ownership after electrification
 - label: appliance_ownership_desire_comparison
 
 
+## Bottom up estimation ranges
+
+- using these approaches, we can bound estimates of energy and power
+    usage for households and villages
+- we can also create a time series estimate of electricity usage for a
+    village
+
 ## Probability distributions
 
+<!-- TODO: this needs more of a motivation -->
 - approach three: create probability distributions by treating as an
     ensemble of bernoulli probabilities.  you can then create a
     distribution of energy consumptions.
@@ -132,7 +175,5 @@
 - Understanding how TV is powered and the cost of that
 - What is the least cost temporal provision of assets for these
     locations?  We borrow from the current utility planning literature.
+- Using measured microgrid data to test estimates
 
-    # Bibliography
-- http://www.nber.org/papers/w17747.pdf wolfram how will energy demand
-    develop
