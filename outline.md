@@ -4,8 +4,14 @@
 
 # Abstract
 
+- in remote areas, electricity provision must be financially viable
+    without subsidy
+- we explore methods to predict appliance acquisition to provide a
+    bottom up model for electricity demand
+
 
 # Introduction
+
 
 ## global topic
 
@@ -13,6 +19,7 @@
 - many areas require private capital to install electricity
 - part of problem is upfront investment cost
 - due to perceived business risk, upfront capital is costly (citation)
+
 
 ## oversizing
 
@@ -29,6 +36,9 @@
 - with more accurate energy estimation, a micro-utility can reduce
     the variance in revenue
 - reductions in revenue variance should lead to lower-cost capital
+- we explore methods for bottom up estimation of appliance ownership
+    after electrification
+
 
 ## study detail
 
@@ -40,6 +50,7 @@
 - if electricity available, will you buy appliance X?
 - we demonstrate several approaches to estimating eventual ownership
 
+
 ## related work
 
 - other studies have made forecasts of electricity demand
@@ -49,11 +60,13 @@
     increases in wealth
 - Jay Taneja IBM Nairobi paper shows district based approach to village
     pairing strategy
+- We augment this pairing strategy with desire to buy
 - this study forecasts energy demand by comparing similar villages
     before and after a connection to electricity
 
 
 # Method
+
 
 ## Assumptions
 - We do not have random sampling
@@ -80,37 +93,38 @@
 - We then split the dataset and assign each village to an access type
     (grid, microgrid, no central access)
 - We observe the reported percentage of appliance in each access type
-- fig label appliance_ownership_by_access_type
-- bar chart
-- x-axis appliance type
-- color access type
-- y-axis percent ownership reported
-- N as part of x-axis label?
-
-
-## Current Appliance Ownership
-
 - We expect to find devices that require more energy only in grid
     locations
-- We test this by classifying the appliances by estimated energy use per day
 - We don't expect to find high energy use appliances in areas without
     central access
-- Show bar chart with numbers
+- We observe a low variation for TV, lighting, and mobile phone
+    ownership across access types
+- We observe higher variation for rice cookers and refrigerators with
+    ownership concentrated in areas with grid connections
+- We observe variation in radio ownership with concentration of
+    ownership in off-grid and community run microgrid areas
+- bar chart
+- include number of observations as part of x-axis label?
+- label: appliance_ownership_by_access_type
+
+![Percent Ownership](figures/percent-ownership.png)
+
+<!-- mattrosi/2015&#45;08&#45;26&#45;App&#45;Own&#45;Grid_Type.ipynb -->
 
 
 ## Surveyed Appliance Desire
 
-- we estimate the percentage of households owning an appliance post
-    electrification using survey responses
-- approach one: for low access areas, add the population currently
-    owning appliances and add the population that doesn't own one but
-    claims that they will buy
-- We look at households that don't currently own an appliance and
-    compute the percentage that state desire to buy that appliance
+- we provide an estimate of post-electrification appliance ownership
+    using the survey responses
+- for low electricity-access areas, add the population currently
+    owning a given appliance to the population that doesn't currently
+    own one but claims that they will buy
 - This should be relatively constant over access types but our data do
     not show that
 - Show bar chart with numbers
 - label: appliance_desire_to_buy_by_access_type
+
+![Predicted Ownership](figures/projected-ownership.png)
 
 
 ## Electrified estimate of appliance ownership
@@ -136,6 +150,8 @@
 - we can compare these two approaches
 - show differences in percentage forecast by access type
 - side by side box or violin plot with dots
+- The stated desire to buy provides a higher estimate than the
+    previously electrified villages
 - x-axis access type
 - color forecast method
 - y-axis percentage ownership after electrification
