@@ -8,12 +8,14 @@
     without subsidy
 - we explore methods to predict appliance acquisition to provide a
     bottom up model for electricity demand
+- these methods provide a range of estimates to be corroborated by
+    future work
 
 
 # Introduction
 
 
-## global topic
+## Global Topic
 
 - global electricity access is poor
 - many areas require private capital to install electricity
@@ -21,7 +23,7 @@
 - due to perceived business risk, upfront capital is costly (citation)
 
 
-## oversizing
+## Oversizing
 
 - oversized microgrids based on overestimated demand that cannot meet
     revenue targets contribute to this perception
@@ -40,18 +42,34 @@
     after electrification
 
 
-## study detail
+## Contribution
 
-- this study aims to improve bottom up models in rural areas for
-    households
+- more accurate forecasting of appliance purchases, use, and resulting
+    electricity demand can improve financial performance by improving
+    the procurement of power generation equipment
+- we use surveys of rural households to create a village level forecast
+    of appliance acquisition after electrification
+- this appliance forecast can be used to create a bottom-up model of
+    electricity demand (cite World Bank Policy Research Working Paper
+    4866)
+- in the short term, we do not use top-down as we do not expect the
+    availability of electricity to significantly influence income
+
+
+## Study Detail
+
+- we use a survey provided by Advancing Energy and Cenderwash University
+- this is a subset of households planned to be electrified in the near
+    future allowing for follow up visits
 - data set with similar communities with and without access
 - survey taken to understand electricity demands and interests
 - do you currently own appliance X?
 - if electricity available, will you buy appliance X?
 - we demonstrate several approaches to estimating eventual ownership
+- full details will be provided in the Methods section
 
 
-## related work
+## Related Work
 
 - other studies have made forecasts of electricity demand
 - Wolfram et al have used an econometric approach to predict the
@@ -186,7 +204,7 @@
 - These provide some point estimates of eventual ownership levels
 
 
-# Future work
+# Future Work
 - Understanding the amount of shared generation
 - Understanding how TV is powered and the cost of that
 - What is the least cost temporal provision of assets for these
