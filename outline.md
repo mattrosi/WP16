@@ -1,6 +1,8 @@
 # Possible Titles
 - Multiple estimates of latent demand using survey data
 - Appliance acquisition after electricity provision
+- Strategies to estimate post-electrification appliance acquisition and
+    demand growth
 
 # Abstract
 
@@ -56,22 +58,10 @@
     availability of electricity to significantly influence income
 
 
-## Study Detail
-
-- we use a survey provided by Advancing Energy and Cenderwash University
-- this is a subset of households planned to be electrified in the near
-    future allowing for follow up visits
-- data set with similar communities with and without access
-- survey taken to understand electricity demands and interests
-- do you currently own appliance X?
-- if electricity available, will you buy appliance X?
-- we demonstrate several approaches to estimating eventual ownership
-- full details will be provided in the Methods section
-
-
 ## Related Work
 
-- other studies have made forecasts of electricity demand
+- other studies have made forecasts of electricity demand in areas with
+    low or no access to electricity
 - Wolfram et al have used an econometric approach to predict the
     appliance acquisition as communities encounter wealth
 - the wolfram study forecasts appliance purchases stimulated by
@@ -83,10 +73,35 @@
     before and after a connection to electricity
 
 
+
 # Method
 
 
-## Assumptions
+## Study Basic Detail
+
+- we use a survey provided by Advancing Energy and Cenderwash University
+- this is a subset of households planned to be electrified in the near
+    future allowing for follow up visits
+- The survey also includes villages with current access
+- survey supplied by collaborators from AE and Cenderwash University
+- survey designed by AE
+- data collected by CU students
+- data collected and hosted online
+- data collected in a single tabular store for analysis
+- N = 1184
+- label: summary_table: table with number of villages by access type and number of households
+
+
+## Survey Questions
+
+- The survey collects factors on income, assets, appliance ownership,
+    willingness to pay, and intention to purchase appliances
+- do you currently own appliance X?
+- if electricity available, will you buy appliance X?
+- we demonstrate several approaches to estimating eventual ownership
+
+
+## Assumptions and Caveats
 - We do not have random sampling
 - We do not consider economic effects since we don't observe significant
     income variations in previously connected areas
@@ -94,23 +109,23 @@
 - Households dominate microgrid energy and power demands
 
 
-## Survey Description
-<!-- TODO: look through summer 2014 notes for appliance schnitzer notes -->
-- survey supplied by collaborators from AE and Cenderwash University
-- survey designed by AE
-- data collected by CU students
-- data collected and hosted online
-- data collected in a single tabular store for analysis
-- N = 1184
+## Tools
+
+- details of analysis can be found in the supplementary materials
+    section
+- we perform analysis using the pandas and seaborn libraries of the
+    scientific python ecosystem
 
 
-## Appliance ownership
+# Results
+
+## Appliance ownership variation
 
 - We observe the overall reported percentage of household reporting
     ownership of each appliance (fig or table)
 - We then split the dataset and assign each village to an access type
     (grid, microgrid, no central access)
-- We observe the reported percentage of appliance in each access type
+- We observe the reported percentage of appliance ownership in each access type
 - We expect to find devices that require more energy only in grid
     locations
 - We don't expect to find high energy use appliances in areas without
@@ -121,6 +136,10 @@
     ownership concentrated in areas with grid connections
 - We observe variation in radio ownership with concentration of
     ownership in off-grid and community run microgrid areas
+- We express the effect of area as log odds ratio
+- The difference in ownership between electrified and unelectrified
+    villages gives an indication of the latent demand for these
+    appliances
 - bar chart
 - include number of observations as part of x-axis label?
 - label: appliance_ownership_by_access_type
@@ -139,6 +158,8 @@
     own one but claims that they will buy
 - This should be relatively constant over access types but our data do
     not show that
+- surveyed appliance desire provides a larger estimate for eventual
+    ownership than comparison with electrified villages
 - Show bar chart with numbers
 - label: appliance_desire_to_buy_by_access_type
 
@@ -147,6 +168,7 @@
 
 ## Electrified estimate of appliance ownership
 
+- Here we attempt to match villages on more aspects than access type
 - we also estimate ownership by measuring the ownership of appliances in
     a similar but previously connected village
 - we assume that newly connected villages will eventually resemble
@@ -185,14 +207,12 @@
 
 ## Probability distributions
 
-<!-- TODO: this needs more of a motivation -->
 - approach three: create probability distributions by treating as an
     ensemble of bernoulli probabilities.  you can then create a
     distribution of energy consumptions.
 - this allows us to move beyond a point estimate
 
 
-# Results
 
 - Quantify levels of generator usage observed in no access regions
 - TV and lighting above X% in all areas with little variation
@@ -211,3 +231,10 @@
     locations?  We borrow from the current utility planning literature.
 - Using measured microgrid data to test estimates
 
+# TODO
+- polish outline in Method section
+- add table summary_table
+- decide on keeping probability distribution section
+- borrow compilation mechanism from GHTC paper
+- notebooks should be in markdown format for better archiving?
+- match villages on more than access type for latent comparison?
