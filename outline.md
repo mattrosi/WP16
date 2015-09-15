@@ -1,3 +1,8 @@
+---
+header-includes:
+    - \usepackage[top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+---
+
 # Possible Titles
 - Multiple estimates of latent demand using survey data
 - Appliance acquisition after electricity provision
@@ -79,21 +84,33 @@
 
 ## Study Basic Detail
 
-- we use a survey provided by Advancing Energy and Cenderwash University
-- this is a subset of households planned to be electrified in the near
-    future allowing for follow up visits
-- The survey also includes villages with current access
-- survey supplied by collaborators from AE and Cenderwash University
-- survey designed by AE
-- data collected by CU students
-- data collected and hosted online
-- data collected in a single tabular store for analysis
-- N = 1184
+- The survey collected data on electricity use and assets for 1184
+    households in the Lake Sentani region
+- Electricity access among the surveyed households ranged from grid
+    access to village-level access, to only household-level sources of energy
+- The survey was designed and administered by Advancing Energy and Cenderwash University
+    as part of an electrification effort in the Lake Sentani region
+- The survey used the ODK platform which allows for the electronic
+    collection of data from hand-held tablet devices
+- The data was stored online using Ona
+- We downloaded the data in an Excel format for local analysis
+
+
+## Basic Survey Results
+
+- 26 Villages
+- Range of village sizes
+- Range of percentage of households surveyed per village
+- Average households surveyed per village
+- Percentage of households surveyed per village
+- Percentage of households by access type
 - label: summary_table: table with number of villages by access type and number of households
 
 
 ## Survey Questions
 
+- The survey was designed to ask questions relevant to the electricity
+    needs of the community
 - The survey collects factors on income, assets, appliance ownership,
     willingness to pay, and intention to purchase appliances
 - do you currently own appliance X?
@@ -102,6 +119,7 @@
 
 
 ## Assumptions and Caveats
+
 - We do not have random sampling
 - We do not consider economic effects since we don't observe significant
     income variations in previously connected areas
@@ -118,6 +136,7 @@
 
 
 # Results
+
 
 ## Appliance ownership variation
 
@@ -185,6 +204,7 @@
 - estimate resulting increase in energy usage
 - compare results from approaches
 
+
 ## Comparison of preferences and matched villages
 
 - we can compare these two approaches
@@ -205,15 +225,13 @@
 - we can also create a time series estimate of electricity usage for a
     village
 
+
 ## Probability distributions
 
 - approach three: create probability distributions by treating as an
     ensemble of bernoulli probabilities.  you can then create a
     distribution of energy consumptions.
 - this allows us to move beyond a point estimate
-
-
-
 - Quantify levels of generator usage observed in no access regions
 - TV and lighting above X% in all areas with little variation
 - television ownership observed in locations without electricity
@@ -230,6 +248,7 @@
 - What is the least cost temporal provision of assets for these
     locations?  We borrow from the current utility planning literature.
 - Using measured microgrid data to test estimates
+
 
 # TODO
 - polish outline in Method section
