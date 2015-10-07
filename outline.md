@@ -57,8 +57,7 @@ header-includes:
 - we use surveys of rural households to create a village level forecast
     of appliance acquisition after electrification
 - this appliance forecast can be used to create a bottom-up model of
-    electricity demand (cite World Bank Policy Research Working Paper
-    4866)
+    electricity demand (cite World Bank Policy Research Working Paper 4866)
 - in the short term, we do not use top-down as we do not expect the
     availability of electricity to significantly influence income
 
@@ -140,25 +139,29 @@ header-includes:
 
 ## Appliance ownership variation
 
+### Method
 - We observe the overall reported percentage of household reporting
-    ownership of each appliance (fig or table)
+    ownership of each appliance (fig or table) using survey questions
+- We report for lighting, mobile phones, television, radio,
+    refrigerators, fans, and rice cookers
 - We then split the dataset and assign each village to an access type
     (grid, microgrid, no central access)
-- We observe the reported percentage of appliance ownership in each access type
-- We expect to find devices that require more energy only in grid
-    locations
-- We don't expect to find high energy use appliances in areas without
-    central access
+- We observe the reported percentage of appliance ownership in each
+    access type by summing the yes/no response and dividing by the
+    number of respondents
+
+### Results
+
 - We observe a low variation for TV, lighting, and mobile phone
     ownership across access types
+- These are highly desirable services with modest energy requirements
 - We observe higher variation for rice cookers and refrigerators with
     ownership concentrated in areas with grid connections
+- Since these appliances require greater power and energy, we expect
+    grid locations
 - We observe variation in radio ownership with concentration of
     ownership in off-grid and community run microgrid areas
-- We express the effect of area as log odds ratio
-- The difference in ownership between electrified and unelectrified
-    villages gives an indication of the latent demand for these
-    appliances
+- No explanation for this observation
 - bar chart
 - include number of observations as part of x-axis label?
 - label: appliance_ownership_by_access_type
@@ -170,11 +173,15 @@ header-includes:
 
 ## Surveyed Appliance Desire
 
+### Method
 - we provide an estimate of post-electrification appliance ownership
     using the survey responses
-- for low electricity-access areas, add the population currently
-    owning a given appliance to the population that doesn't currently
-    own one but claims that they will buy
+- for households that don't currently own an appliance, we
+- of the households that do not own an appliance, what fraction of them
+    state a preference to buy one if electricity is available
+- these potential purchases provide one estimate of latent demand
+
+### Results
 - This should be relatively constant over access types but our data do
     not show that
 - surveyed appliance desire provides a larger estimate for eventual
